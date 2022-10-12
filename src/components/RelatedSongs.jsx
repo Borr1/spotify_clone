@@ -1,8 +1,8 @@
 import SongBar from './SongBar';
 
 const RelatedSongs = ({
-  handlePauseClick,
   handlePlayClick,
+  handlePauseClick,
   activeSong,
   isPlaying,
   data,

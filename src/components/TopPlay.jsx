@@ -24,7 +24,7 @@ const TopChartCard = ({
         className="w-20 h-20 rounded-lg"
         alt={song?.title}
         src={song?.images?.coverart}
-      ></img>
+      />
       <div className="flex-1 flex-col flex justify-center mx-4">
         <Link to={`/songs/${song?.key}`}>
           <h1 className="text-white font-bold text-xl">{song?.title}</h1>
@@ -69,9 +69,6 @@ const TopPlay = () => {
       <div className="flex flex-col">
         <div className="flex flex-row justify-between items-center">
           <h3 className="text-white font-bold text-2xl">Top Charts</h3>
-          <Link to="/top-charts">
-            <p className="text-gray-300 text-base cursor-pointer">See More</p>
-          </Link>
         </div>
         <div className="mt-4 flex flex-col gap-1">
           {topCharts?.map((song, i) => (
@@ -92,9 +89,6 @@ const TopPlay = () => {
           {' '}
           <div className=" flex flex-row justify-between items-center">
             <h3 className="text-white font-bold text-2xl">Top Artists</h3>
-            <Link to="/top-artists">
-              <p className="text-gray-300 text-base cursor-pointer">See More</p>
-            </Link>
           </div>
           <Swiper
             slidesPerView="auto"
@@ -116,7 +110,7 @@ const TopPlay = () => {
                     alt="artist"
                     src={song?.images.background}
                     className="rounded-full w-full object-cover"
-                  ></img>
+                  />
                 </Link>
               </SwiperSlide>
             ))}
